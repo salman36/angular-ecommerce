@@ -1,0 +1,25 @@
+.nav-item{
+    cursor: pointer;
+}
+
+.suggested-result{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #fff;
+    width: 207px;
+    top: 40px;
+    border: 1px solid #ddd;
+    list-style-type: none;
+}
+
+.suggested-result li{
+    border: 1px solid #fff;
+    padding: 5px;
+
+}
+
+.suggested-result li a{
+    cursor: pointer;
+    color: blueviolet;
+}

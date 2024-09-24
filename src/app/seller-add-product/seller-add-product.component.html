@@ -1,0 +1,35 @@
+<div class="product">
+    <p *ngIf="addProductMessage" class="alert alert-success text-center">{{addProductMessage}}</p>
+  <form #addProduct="ngForm" (ngSubmit)="submitProduct(addProduct.value,addProduct)">
+    <h2>Add New Product</h2>
+    <div class="row">
+      <div class="col">
+        <input type="text" name="product_name" class="form-control" placeholder="Product name" aria-label="Product name" ngModel>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="product_price" placeholder="Product Price" aria-label="Product Price" ngModel>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <input type="text" name="product_colour" class="form-control" placeholder="Product Colour" aria-label="Product Colour" ngModel>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="product_category" placeholder="Product Category" aria-label="Product Category" ngModel>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <textarea type="textarea" name="product_discription" class="form-control" placeholder="Product Discription" aria-label="Product Discription" ngModel></textarea>
+      </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+          <input type="text" name="product_image" class="form-control" placeholder="Product image url" aria-label="Product image url" ngModel>
+        </div>
+    </div>
+      <div class="mb-3 mt-3">
+        <button class="btn btn-success" type="submit">Add Product</button>
+    </div>
+  </form>
+</div>

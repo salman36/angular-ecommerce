@@ -1,0 +1,41 @@
+<div class="product-list">
+    <p *ngIf="productMessage" class="alert alert-success text-center">{{productMessage}}</p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Colour</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productList; let i = index">
+              <td>{{item.id}}</td>
+              <td><img src="{{item.product_image}}" /></td>
+              <td>{{item.product_name}}</td>
+              <td>{{item.product_price}}</td>
+              <td>{{item.product_colour}}</td>
+              <td>{{item.product_category}}</td>
+              <td>
+                <span *ngIf="!item.expanded">
+                  {{item.product_discription | slice:0:40}}
+                  <button class="btn btn-primary read-more" (click)="toggleDescription(i)">Read More</button>
+                </span>
+                <span *ngIf="item.expanded">
+                  {{item.product_discription}}
+                  <button class="btn btn-primary read-more" (click)="toggleDescription(i)">Read Less</button>
+                </span>
+              </td>
+              <td>
+                <fa-icon (click)="deleteProduct(item.id)" [icon]="trashIcon"></fa-icon>
+                <a class="update-link" routerLink="/seller-update-product/{{item.id}}"><fa-icon  [icon]="editIcon"></fa-icon></a>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+</div>

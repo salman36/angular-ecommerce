@@ -1,0 +1,83 @@
+{
+  "seller": [
+    {
+      "id": "1121",
+      "name": "suleman",
+      "email": "suleman@gmail.com",
+      "password": "dangers$#00",
+      "confirm_password": "dangers$#00"
+    },
+    {
+      "id": "4cad",
+      "name": "suleman",
+      "email": "suleman@gmailcom",
+      "password": "435435345",
+      "confirm_password": "4354534534"
+    }
+  ],
+  "products": [
+    {
+      "product_name": "shirt",
+      "product_price": "1200",
+      "product_colour": "white",
+      "product_category": "sfd",
+      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapter",
+      "product_image": "https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4",
+      "id": "6df7"
+    },
+    {
+      "id": "a194",
+      "product_name": "test",
+      "product_price": "1200",
+      "product_colour": "test",
+      "product_category": "test",
+      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
+      "product_image": "https://fastly.picsum.photos/id/4/5000/3333.jpg?hmac=ghf06FdmgiD0-G4c9DdNM8RnBIN7BO0-ZGEw47khHP4"
+    },
+    {
+      "product_name": "test",
+      "product_price": "test",
+      "product_colour": "black",
+      "product_category": "test",
+      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
+      "product_image": "https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o",
+      "id": "8814"
+    },
+    {
+      "id": "d3de",
+      "product_name": "test",
+      "product_price": "100",
+      "product_colour": "test",
+      "product_category": "test",
+      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
+      "product_image": "https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68"
+    },
+    {
+      "id": "6e35",
+      "product_name": "test",
+      "product_price": "322",
+      "product_colour": "test",
+      "product_category": "test",
+      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
+      "product_image": "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s"
+    },
+    {
+      "id": "91db",
+      "product_name": "test",
+      "product_price": "32",
+      "product_colour": "test",
+      "product_category": "test",
+      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
+      "product_image": "https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY"
+    },
+    {
+      "id": "758d",
+      "product_name": "test",
+      "product_price": "3535",
+      "product_colour": "test",
+      "product_category": "test",
+      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
+      "product_image": "https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I"
+    }
+  ]
+}

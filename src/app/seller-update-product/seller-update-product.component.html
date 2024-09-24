@@ -1,0 +1,35 @@
+<div class="product">
+    productMessage <p *ngIf="productMessage" class="alert alert-success text-center">{{productMessage}}</p>
+  <form #updateProduct="ngForm" (ngSubmit)="submitProduct(updateProduct.value)">
+    <h2>Update Product</h2>
+    <div class="row">
+      <div class="col">
+        <input type="text" name="product_name" class="form-control" placeholder="Product name" aria-label="Product name" ngModel="{{productData?.product_name}}">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="product_price" placeholder="Product Price" aria-label="Product Price" ngModel="{{productData?.product_price}}">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <input type="text" name="product_colour" class="form-control" placeholder="Product Colour" aria-label="Product Colour" ngModel="{{productData?.product_colour}}">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" name="product_category" placeholder="Product Category" aria-label="Product Category" ngModel="{{productData?.product_category}}">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <textarea type="textarea" name="product_discription" class="form-control" placeholder="Product Discription" aria-label="Product Discription" ngModel="{{productData?.product_discription}}"></textarea>
+      </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+          <input type="text" name="product_image" class="form-control" placeholder="Product image url" aria-label="Product image url" ngModel="{{productData?.product_image}}">
+        </div>
+    </div>
+      <div class="mb-3 mt-3">
+        <button class="btn btn-success" type="submit">Update Product</button>
+    </div>
+  </form>
+</div>

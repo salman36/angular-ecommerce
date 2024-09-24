@@ -1,0 +1,29 @@
+export interface signUp{
+    id: number;
+    name:String,
+    email:String,
+    password:String,
+}
+
+export interface login{
+    email:String,
+    password:String,
+}
+
+export interface product {
+  expanded: boolean;
+product_discription: any;
+product_category: any;
+product_colour: any;
+product_price: any;
+product_name: any;
+product_image:any;
+    id: number;
+    name: String;
+    price: number;
+    colour:String;
+    category:String;
+    description: String;
+    image:String
+
+}

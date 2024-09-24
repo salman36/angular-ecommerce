@@ -1,0 +1,34 @@
+<div class="container mt-3">
+    <div class="row" *ngIf="searchResult && searchResult.length > 0; else noResults">
+        <div class="col-md-12">
+            <!-- Displaying search results -->
+            <div class="row search-item mb-3" *ngFor="let item of searchResult">
+                <div class="col-sm-3">
+                    <a routerLink="/details/{{item.id}}">
+                        <img src="{{item.product_image}}" alt="{{item.product_name}}" class="img-fluid rounded">
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                    <a routerLink="/details/{{item.id}}">
+                        <h6>{{item.product_name}}</h6>
+                    </a>
+                    <p><b>Price: {{ isValidNumber(item.product_price) ? (item.product_price | currency:'PKR') : 'N/A' }}</b></p>
+                    <p>
+                        <span>Color: {{item.product_colour}}</span><br>
+                        <span>Category: {{item.product_category}}</span>
+                    </p>
+                    <p>Product Search UI</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Display this if no search results are found -->
+    <ng-template #noResults>
+        <div class="alert alert-warning text-center" role="alert">
+            No results found.
+        </div>
+    </ng-template>
+</div>
+
+
