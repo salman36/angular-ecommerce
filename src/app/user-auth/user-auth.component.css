@@ -1,0 +1,21 @@
+.mb-5 {
+    margin-bottom: 1rem !important;
+}
+
+.p-5 {
+    padding: 2rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mt-5 {
+    margin-top: 1rem !important;
+}
+.common-form{
+    cursor: pointer;
+}
+.d-error{
+    color: red;
+}

@@ -12,21 +12,55 @@ export class HeaderComponent {
   menuType: String = "default";
   sellerName:string='';
   searchResult:undefined | product[];
+  userName:String = '';
   constructor(private router:Router, private product:ProductService) {}
+
+  ///////////////////////// OLD NGONINIT function ///////////////////////
+  // ngOnInit(): void {
+  //   this.router.events.subscribe((val: any) => {
+  //     if (val instanceof NavigationEnd) {
+  //       if (val.url.includes('/seller')) {
+  //         this.menuType = 'seller';
+  //         if(localStorage.getItem('Auth-token')){
+  //           let sellerStore = localStorage.getItem('Auth-token')
+  //           let sellerData =  sellerStore && JSON.parse(sellerStore)
+  //           this.sellerName =  sellerData[0].name;
+  //         }else if(localStorage.getItem('user')){
+  //           let userStore = localStorage.getItem('user');
+  //           let userData =  userStore && JSON.parse(userStore);
+  //           console.log(userData);
+  //           this.userName = userData[0].name;
+  //           this.menuType = 'user';
+
+  //         }
+  //       } else {
+  //         this.menuType = 'default';
+  //       }
+  //     }
+  //   });
+  // }
+  ///////////////////////// NEW NGONINIT function ///////////////////////
   ngOnInit(): void {
     this.router.events.subscribe((val: any) => {
       if (val instanceof NavigationEnd) {
+        // Check if the user is on a seller page
         if (val.url.includes('/seller')) {
           this.menuType = 'seller';
-          if(localStorage.getItem('Auth-token')){
-            let sellerStore = localStorage.getItem('Auth-token')
-            let sellerData =  sellerStore && JSON.parse(sellerStore)
-            this.sellerName =  sellerData[0].name;
-          }
+          const sellerStore = localStorage.getItem('Auth-token');
+          const sellerData = sellerStore && JSON.parse(sellerStore);
+          this.sellerName = sellerData ? sellerData[0].name : '';
         } else {
-          this.menuType = 'default';
+          // Check if the user is logged in
+          const userStore = localStorage.getItem('user');
+          if (userStore) {
+            const userData = JSON.parse(userStore);
+            this.userName = userData.name || '';
+            this.menuType = 'user';
+          } else {
+            this.menuType = 'default';
+          }
         }
-        console.warn(this.menuType); // Debugging line to check menu type
+        //console.warn(this.menuType); // Debugging line to check menu type
       }
     });
   }
@@ -35,6 +69,13 @@ export class HeaderComponent {
   {
       localStorage.removeItem('Auth-token');
       this.router.navigate(['/']); // Navigate to login page after logout
+
+  }
+
+  userLogout()
+  {
+    localStorage.removeItem('user');
+    this.router.navigate(['/user-auth']); // Navigate to login page after logout
 
   }
 

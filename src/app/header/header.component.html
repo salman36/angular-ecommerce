@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
         </li>
@@ -16,10 +16,13 @@
           <a class="nav-link" routerLink="/">Home</a>
         </li>
         <li class="nav-item" *ngIf="menuType === 'default'">
-          <a class="nav-link">Login</a>
+          <a class="nav-link" routerLink="/user-auth">Login/Sign-up</a>
         </li>
         <li class="nav-item" *ngIf="menuType === 'default'">
           <a class="nav-link" href="#">Cart(0)</a>
+        </li>
+        <li class="nav-item" *ngIf="menuType === 'user'">
+          <a class="nav-link">{{ userName }}</a>
         </li>
         <li class="nav-item" *ngIf="menuType === 'seller'">
           <a class="nav-link" routerLink="seller-home">Product List</a>
@@ -33,7 +36,56 @@
         <li class="nav-item" *ngIf="menuType === 'seller'">
           <a class="nav-link">{{sellerName | titlecase }}</a>
         </li>
+        
+      </ul> -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <!-- Use ngSwitch to manage different menu views -->
+        <ng-container [ngSwitch]="menuType">
+          <!-- Default Menu -->
+          <ng-container *ngSwitchCase="'default'">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/sel-auth">Seller</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/user-auth">Login/Sign-up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cart(0)</a>
+            </li>
+          </ng-container>
+
+          <!-- User Menu -->
+          <ng-container *ngSwitchCase="'user'">
+            <li class="nav-item">
+              <a class="nav-link" (click)="userLogout()">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">{{ userName }}</a>
+            </li>
+          </ng-container>
+
+          <!-- Seller Menu -->
+          <ng-container *ngSwitchCase="'seller'">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="seller-home">Product List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="seller-product">Add Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="logout()">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">{{ sellerName | titlecase }}</a>
+            </li>
+          </ng-container>
+
+        </ng-container>
       </ul>
+        
       <form class="d-flex" (submit)="submitSearch(searchInput.value)">
         <input class="form-control me-2" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()" type="search" placeholder="Search Products" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
