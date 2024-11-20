@@ -13,6 +13,7 @@ export class HeaderComponent {
   sellerName:string='';
   searchResult:undefined | product[];
   userName:String = '';
+  cartItems = 0;
   constructor(private router:Router, private product:ProductService) {}
 
   ///////////////////////// OLD NGONINIT function ///////////////////////
@@ -56,6 +57,7 @@ export class HeaderComponent {
             const userData = JSON.parse(userStore);
             this.userName = userData.name || '';
             this.menuType = 'user';
+            this.product.getCartList(userData.id);
           } else {
             this.menuType = 'default';
           }
@@ -63,6 +65,16 @@ export class HeaderComponent {
         //console.warn(this.menuType); // Debugging line to check menu type
       }
     });
+
+    let cartData = localStorage.getItem('localCart');
+    if(cartData){
+      this.cartItems = JSON.parse(cartData).length;
+    }
+
+    this.product.cartData.subscribe((items)=>{
+      this.cartItems = items.length;
+    })
+
   }
 
   logout()
@@ -76,6 +88,8 @@ export class HeaderComponent {
   {
     localStorage.removeItem('user');
     this.router.navigate(['/user-auth']); // Navigate to login page after logout
+    this.product.cartData.emit([]);
+
 
   }
 

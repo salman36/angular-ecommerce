@@ -53,8 +53,9 @@
               <a class="nav-link" routerLink="/user-auth">Login/Sign-up</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cart(0)</a>
+              <a class="nav-link" href="#">Cart({{cartItems}})</a>
             </li>
+            
           </ng-container>
 
           <!-- User Menu -->
@@ -64,6 +65,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link">{{ userName }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cart({{cartItems}})</a>
             </li>
           </ng-container>
 
