@@ -103,54 +103,6 @@
       "confirm_password": "dangers$#00"
     }
   ],
-  "cart": [
-    {
-      "id": "2ea7",
-      "product_name": "test",
-      "product_price": "322",
-      "product_colour": "Yellow",
-      "product_category": "test",
-      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
-      "product_image": "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
-      "quantity": 1,
-      "productId": "6e35",
-      "userId": "ebe8"
-    },
-    {
-      "id": "b59d",
-      "product_name": "test",
-      "product_price": "3535",
-      "product_colour": "Pink",
-      "product_category": "test",
-      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
-      "product_image": "https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I",
-      "quantity": 1,
-      "userId": "ebe8",
-      "productId": "758d"
-    },
-    {
-      "id": "f0a5",
-      "product_name": "test",
-      "product_price": "322",
-      "product_colour": "Yellow",
-      "product_category": "test",
-      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
-      "product_image": "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
-      "quantity": 1,
-      "userId": "ebe8",
-      "productId": "6e35"
-    },
-    {
-      "id": "e2c9",
-      "product_name": "test",
-      "product_price": "32",
-      "product_colour": "Red",
-      "product_category": "test",
-      "product_discription": "The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapte",
-      "product_image": "https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY",
-      "quantity": 1,
-      "userId": "ebe8",
-      "productId": "91db"
-    }
-  ]
+  "cart": [],
+  "orders": []
 }

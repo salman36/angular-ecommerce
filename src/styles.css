@@ -7,3 +7,7 @@
     background-color: black;
     border: 5px;
 }
+
+.max-width{
+    width: 100%;
+}

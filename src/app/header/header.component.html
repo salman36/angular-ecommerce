@@ -61,13 +61,16 @@
           <!-- User Menu -->
           <ng-container *ngSwitchCase="'user'">
             <li class="nav-item">
-              <a class="nav-link" (click)="userLogout()">Logout</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link">{{ userName }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cart({{cartItems}})</a>
+              <a class="nav-link" routerLink="my-orders">My Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="cartItems > 0 ?'cart-page':null">Cart({{cartItems}})</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="userLogout()">Logout</a>
             </li>
           </ng-container>
 

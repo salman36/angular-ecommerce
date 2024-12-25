@@ -1,0 +1,36 @@
+.checkout h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.shipping-address h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.common-form{
+    cursor: pointer;
+    padding-left: 50px;
+}
+
+.form-button{
+    height: 35px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.payment-method{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.message-p{
+    color: green;
+    text-align: center;
+}
